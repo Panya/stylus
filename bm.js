@@ -4,7 +4,8 @@
  */
 
 var stylus = require('./')
-  , fs = require('fs');
+  , fs = require('fs')
+  , resolver = require('./lib/functions/resolver');
 
 var times = ~~process.env.TIMES || 1
   , avgs = [];
