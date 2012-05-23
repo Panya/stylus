@@ -1,0 +1,13 @@
+body {
+  background: #fff;
+  color: #000;
+}
+h1 {
+  color: #0c0;
+}
+h2 {
+  color: #cf0;
+}
+h3 {
+  background: url("import.include.nested/lol.gif");
+}
