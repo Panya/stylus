@@ -4,7 +4,8 @@
  */
 
 var stylus = require('./')
-  , fs = require('fs');
+  , fs = require('fs')
+  , resolver = require('./lib/functions/resolver');
 
 var times = ~~process.env.TIMES || 1
   , avgs = [];
@@ -30,6 +31,11 @@ cases.forEach(function(test){
     .define('url', stylus.url());
 
   if (~test.indexOf('compress')) style.set('compress', true);
+
+  if (~test.indexOf('include')) {
+      style.set('include css', true);
+      style.define('url', resolver());
+  }
 
   var runs = []
     , n = times
