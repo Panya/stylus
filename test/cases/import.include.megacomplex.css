@@ -3,12 +3,12 @@ body {
 }
 h1 {
   color: #c00;
-  background: url(foo.gif);
+  background: url("import.include.megacomplex/b/d/foo.gif");
 }
 h2 {
   color: #0c0;
-  background: url(foo.png);
+  background: url("import.include.megacomplex/b/e/foo.png");
 }
 h4 {
-  background: url(../foo.jpg);
+  background: url("import.include.megacomplex/foo.jpg");
 }
