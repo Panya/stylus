@@ -103,6 +103,12 @@ var includeCSS = false;
 var imports = [];
 
 /**
+ * Resolve relative urls
+ */
+
+var resolveURL = false;
+
+/**
  * Usage docs.
  */
 
