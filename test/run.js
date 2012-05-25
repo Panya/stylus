@@ -4,8 +4,7 @@
  */
 
 var stylus = require('../')
-  , fs = require('fs')
-  , resolver = require('../lib/functions/resolver');
+  , fs = require('fs');
 
 // test cases
 
@@ -33,7 +32,8 @@ describe('integration', function(){
 
       if (~test.indexOf('include')) {
           style.set('include css', true);
-          style.define('url', resolver());
+          style.set('resolve url', true);
+          style.define('url', stylus.resolver());
       }
 
       style.render(function(err, actual){
