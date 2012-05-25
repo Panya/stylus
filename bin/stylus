@@ -128,6 +128,7 @@ var usage = [
   , '    -l, --line-numbers      Emits comments in the generated css'
   , '                            indicating the corresponding stylus line'
   , '    --include-css           Include regular css on @import'
+  , '    -r, --resolve-url       Resolve relative urls inside imports'
   , '    -V, --version           Display the version of stylus'
   , '    -h, --help              Display help information'
   , ''
@@ -231,6 +232,10 @@ while (args.length) {
         paths.push(dirname(path));
         plugins.push({ path: path, options: options });
       }
+      break;
+    case '-r':
+    case '--resolve-url':
+      resolveURL = true;
       break;
     default:
       files.push(arg);
@@ -454,6 +459,8 @@ function compileStdio() {
     // Compile to css
     var style = stylus(str, options);
     if (includeCSS) style.set('include css', true);
+    if (resolveURL) style.set('resolve url', true);
+
     usePlugins(style);
     style.render(function(err, css){
       if (err) throw err;
@@ -492,6 +499,8 @@ function compileFile(file) {
         options._imports = [];
         var style = stylus(str, options);
         if (includeCSS) style.set('include css', true);
+        if (resolveURL) style.set('resolve url', true);
+
         usePlugins(style);
         style.render(function(err, css){
           watchImports(file, options._imports);
@@ -592,5 +601,9 @@ function usePlugins(style) {
     style.use(fn(options));
   });
 
-  if (urlFunction) style.define('url', stylus.url(urlFunction));
+  if (urlFunction) {
+    style.define('url', stylus.url(urlFunction));
+  } else if (resolveURL) {
+    style.define('url', stylus.resolver());
+  }
 }
