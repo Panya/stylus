@@ -97,6 +97,12 @@ var urlFunction = false;
 var includeCSS = false;
 
 /**
+ * Resolve relative urls
+ */
+
+var resolveURL = false;
+
+/**
  * Usage docs.
  */
 
