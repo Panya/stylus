@@ -1,0 +1,14 @@
+body {
+  background: #000;
+}
+h1 {
+  color: #c00;
+  background: url("import.include.megacomplex/b/d/foo.gif");
+}
+h2 {
+  color: #0c0;
+  background: url("import.include.megacomplex/b/e/foo.png");
+}
+h4 {
+  background: url("import.include.megacomplex/foo.jpg");
+}

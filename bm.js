@@ -31,6 +31,12 @@ cases.forEach(function(test){
 
   if (~test.indexOf('compress')) style.set('compress', true);
 
+  if (~test.indexOf('include')) {
+      style.set('include css', true);
+      style.set('resolve url', true);
+      style.define('url', stylus.resolver());
+  }
+
   var runs = []
     , n = times
     , start;
