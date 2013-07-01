@@ -1,3 +1,22 @@
+0.33.1 / 2013-06-30 
+==================
+
+  * Fixed the `exports.version` to always show an actual one.
+
+0.33.0 / 2013-06-30 
+==================
+
+  * Added extendable placeholder selectors, #1014.
+  * Added optional argument to `image-size` function, #812.
+  * Fixed inline comments after selectors, #862.
+  * Fixed a bug with empty block in CSS syntax, #712.
+ 
+0.32.1 / 2013-02-27 
+==================
+
+  * fix issue on Windows where absolute path starts with two backslashes
+  * fix extends within a loop.
+  * fix: don't try to read absolute urls
 
 0.32.0 / 2013-01-04 
 ==================
