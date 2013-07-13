@@ -1,3 +1,18 @@
+0.34.1 / 2013-07-12
+==================
+
+  * Fixed the regression after #865.
+
+0.34.0 / 2013-07-12
+==================
+
+  * Added built-in `use()` function to extend Stylus from inside  of `.styl` files, #788.
+  * Added optional resolver of relative urls, #1070.
+  * Fixes incorrect imports lookup inside function call, #1069.
+  * Fixes a lot of issues with trailing symbols in comments, #865.
+  * Fixes brace on a newline CSS code style.
+  * Some minor fixes to tmbundle: #975, #1033, #1034.
+ 
 0.33.1 / 2013-06-30 
 ==================
 
