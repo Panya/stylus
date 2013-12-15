@@ -1,3 +1,15 @@
+0.41.3 / 2013-12-12
+==================
+  
+  * Fixed regression for `selector`, #1278.
+
+0.41.2 / 2013-12-10
+==================
+  
+  * Fixed property lookup in blocks, #1273.
+  * Fixed @extend in blocks, #1274.
+  * Fixed if-else-if-else, #1276.
+
 0.41.1 / 2013-12-08
 ==================
 
